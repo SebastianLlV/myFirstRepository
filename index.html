@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html, body {
+            background-color: blueviolet;
+            font-family: sans-serif;
+        }
+
+        h1, p {
+            color: #fff;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            display: block;
+            margin: 16px auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +32,11 @@
 <script>
     document.querySelector('button').addEventListener('click', () => {
         const message = document.querySelector('p');
-        message.innerHTML = 'Hello!';
+        if (message.innerHTML === 'Hello!') {
+            message.innerHTML = '';
+        } else {
+            message.innerHTML = 'Hello!';
+        }
     });
 </script>
 
