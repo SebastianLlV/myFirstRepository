@@ -30,13 +30,10 @@
     <p></p>
 </body>
 <script>
+    let counter = 0;
     document.querySelector('button').addEventListener('click', () => {
         const message = document.querySelector('p');
-        if (message.innerHTML === 'Hello!') {
-            message.innerHTML = '';
-        } else {
-            message.innerHTML = 'Hello!';
-        }
+        message.innerHTML = `${counter++}`;
     });
 </script>
 
